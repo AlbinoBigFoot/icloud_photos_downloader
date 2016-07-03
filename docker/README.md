@@ -1,11 +1,21 @@
 iCloud Photos Downloader - Docker image
 ---------------------------------------
 
-icloud_photos_downloader tool packaged as a Docker image.
+icloud_photos_downloader tool packaged as a Docker image. Attmped to keep it small,
+it comes to about ~76Mb.
 
 See https://github.com/ndbroadbent/icloud_photos_downloader
 
 This is my first Docker container, so don't expect too much.
+
+Important disclosures
+---------------------
+
+I did not write the icloud_photos_downloader tool and do not specifically endorse it
+as being secure or bug free.  Proceed at your own risk. 
+
+Your credentials will be stored inside the Docker container using a PlainTextKeyring.  
+This is probably not the most secure method, so proceed at your own risk.
 
 How to use
 ----------

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/local/bin/dumb-init /bin/sh
 
 # This command will quit if there are already iCloud credentials.
 # If there are no credentials, then use an interactive docker session to set them.
