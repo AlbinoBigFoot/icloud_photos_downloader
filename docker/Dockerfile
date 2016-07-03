@@ -4,6 +4,7 @@ MAINTAINER Jake Bordens <jake at allaboutjake.com>
 VOLUME /photos
 VOLUME /root
 
+# dumb-init install adapted from https://github.com/qnib/alpn-base/blob/master/Dockerfile
 ENV DUMB_INIT_VER=1.1.1
 
 RUN apk update && apk upgrade && \
