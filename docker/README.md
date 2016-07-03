@@ -8,6 +8,16 @@ See https://github.com/ndbroadbent/icloud_photos_downloader
 
 This is my first Docker container, so don't expect too much.
 
+Disclaimer
+----------
+This docker image/program is distributed in the hope that it will be useful, but WITHOUT ANY 
+WARRANTY;  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+PURPOSE.  See the GNU General Public License for more details.
+
+License
+-------
+This is released under GPL 3.0
+
 Important disclosures
 ---------------------
 
