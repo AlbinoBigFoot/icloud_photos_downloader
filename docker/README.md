@@ -64,3 +64,8 @@ Subsequent launches of the container can be done using "start"
     docker start iCloudPhotosDownloader
 
 If you discard the container, then you'll have to reauthenticate like in Step 2.
+
+Revision History
+----------------
+- 0.1 Initial Release
+- 0.2 Script will now read the UID/GID of the target volume, create a matching user/group as needed, and then run as this user/group to make sure files are created with the same permissions as the host volume.

@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Jake Bordens <jake at allaboutjake.com>
 
 VOLUME /photos
-VOLUME /root
+VOLUME /home
 
 # dumb-init install adapted from https://github.com/qnib/alpn-base/blob/master/Dockerfile
 ENV DUMB_INIT_VER=1.1.1
@@ -21,6 +21,10 @@ RUN apk add --update \
     py-pip \
     py-setuptools
 
+# Need shadow packaage for usermod and groupadd
+RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+RUN apk --update add gosu@testing
+
 # Get the icloud_photos_downloader
 RUN git clone https://github.com/ndbroadbent/icloud_photos_downloader.git
 
@@ -34,7 +38,7 @@ RUN apk del git py-pip
 # Clean up 
 RUN rm -rf /var/cache/apk/*
 
-# Set the entrypoint
+# Start-up
 COPY start.sh .
 RUN chmod +x start.sh
 CMD ./start.sh
